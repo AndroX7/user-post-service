@@ -81,7 +81,7 @@ class UserController {
           let access_token = jwt.sign({ id: registerUser.id, username: registerUser.username, email: registerUser.email}, process.env.SECRET_KEY);
           res.status(201).json({
             sent_to: registerUser.email,
-            message: `User @${registerUser.email} successfully registered!, Please Activated your account at : http://localhost:3007/${access_token}/-b/active`
+            message: `User @${registerUser.email} successfully registered!, Please Activated your account at : https://wlb-pre-test.herokuapp.com/${access_token}/-b/active`
           })
         }
       }
